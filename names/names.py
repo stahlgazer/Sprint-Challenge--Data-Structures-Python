@@ -18,13 +18,20 @@ duplicates = []  # Return the list of duplicates in this data structure
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-# Optimized with set intersection
+### Runtime Before Optimization: 5.4-6.7 seconds
+# # Optimized with set intersection
+
 if len(names_1) == len(names_2):
     duplicates.extend(set(names_1).intersection(names_2))
-
-# Stretch/Alternate condition if lists have different sizes
 else:    
     duplicates = [x for x in names_1 if x in names_2]
+    
+### Runtime After Optimization: <= .005 Seconds
+    ## Stretch/Alternate condition if lists have different sizes
+    ### Runtime For Secondary Solution: <= 1.29 Seconds
+
+
+
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
