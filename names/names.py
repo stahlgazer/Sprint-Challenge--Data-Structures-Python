@@ -24,8 +24,8 @@ duplicates = []  # Return the list of duplicates in this data structure
 if len(names_1) == len(names_2):
     duplicates.extend(set(names_1).intersection(names_2))
 else:    
-    duplicates = [x for x in names_1 if x in names_2]
-    
+    duplicates = [name for name in names_1 if name in names_2]
+
 ### Runtime After Optimization: <= .005 Seconds
     ## Stretch/Alternate condition if lists have different sizes
     ### Runtime For Secondary Solution: <= 1.29 Seconds
