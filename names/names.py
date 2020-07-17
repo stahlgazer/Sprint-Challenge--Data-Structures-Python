@@ -17,8 +17,12 @@ duplicates = []  # Return the list of duplicates in this data structure
 #     for name_2 in names_2:
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
+
+# Optimized with set intersection
 if len(names_1) == len(names_2):
     duplicates.extend(set(names_1).intersection(names_2))
+
+# Stretch/Alternate condition if lists have different sizes
 else:    
     duplicates = [x for x in names_1 if x in names_2]
 
